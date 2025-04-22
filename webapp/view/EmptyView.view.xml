@@ -1,0 +1,11 @@
+ <mvc:View controllerName="app.miningdetailsb27.controller.DetailView"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" 
+    xmlns="sap.m">
+	<Page id="idEmpty" title="Empty View" >
+    
+        <VBox class="sapUiSmallMargin">
+         <Text text="No data available" />
+      </VBox>
+
+	</Page>
+</mvc:View> 

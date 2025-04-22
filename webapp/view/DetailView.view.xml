@@ -1,0 +1,78 @@
+<mvc:View controllerName="app.miningdetailsb27.controller.DetailView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:comp="sap.ui.comp.filterbar">
+    <Page id="idDetail1" title="Details of Mining " showNavButton="true" navButtonPress="onListView">
+        <content>
+            <f:SimpleForm editable="true" class="formm">
+                <Label text="Mining Name" class="bold-class" design="Bold"/>
+                <Text text="{miningsModel>mine_name}" class="text-class"/>
+                <Label text="Location" class="bold-class"/>
+                <Text text="{miningsModel>location}" class="text-class"/>
+                 <Label text="Production Capacity" design="Bold" class="bold-class"/>
+                <Text text="{miningsModel>production_capacity}" class="text-class"/>
+                <Image src="{miningsModel>image}" width="250px" height="250px" class="imgg" tooltip="Mining Image"/>
+            </f:SimpleForm>
+            <IconTabBar>
+                <items>
+                    <IconTabFilter icon="sap-icon://information">
+                        <VBox class="vbox-class">
+                            <HBox class="hbox-class">
+                                <Label text="Mineral Type :" design="Bold" class="bold-class"/>
+                                <Text text="{miningsModel>mineral_type}" class="text-class"/>
+                            </HBox>
+                            <HBox class="hbox-class">
+                                <Label text="Last Inception Date :" design="Bold" class="bold-class"/>
+                                <Text text="{miningsModel>last_inspection_date}" class="text-class"/>
+                            </HBox>
+                            <HBox class="hbox-class">
+                                <Label text="Status :" class="bold-class"/>
+                                <Text text="{miningsModel>operational_status}" class="text-class" state="{= ${miningsModel>operational_status} === 'Active' ? 'Success':'Error'}"/>
+                            </HBox>
+                        </VBox>
+                    </IconTabFilter>
+
+                    <IconTabFilter icon="sap-icon://supplier">
+                    <Label text="Supplier" ></Label>
+                              <Input id="idInptSupp" width="200px" liveChange="onFilter"></Input>
+                    <Label text="Mine Type" ></Label>
+                                <Input id="idInptMineType" width="200px" liveChange="onFilter"></Input>
+
+                                
+                        <Table  id="idMTable" items="{miningsModel>/supplierSet}">
+                            <columns>
+                            <Column>
+                                    <Text text="Mine Name" />
+                                </Column>
+                                <Column>
+                                    <Text text="Supplier name" />
+                                </Column>
+                                   <Column>
+                                    <Text text="Mineral Type" />
+                                </Column>
+                                <Column>
+                                    <Text text="Contact" />
+                                </Column>
+                             
+                            </columns>
+                       <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Text text="{miningsModel>mine_name}" />
+                                          <Input value="{miningsModel>supplier_name}"
+                                        showValueHelp="true"
+                                        valueHelpRequest="onF4Help"></Input>
+                                        <Text text="{miningsModel>mineral_type}"/>
+                                        <Text text="{miningsModel>contact}"/>
+                                    </cells>
+                                </ColumnListItem>
+                           </items>
+                        </Table>
+                    </IconTabFilter>
+
+                </items>
+            </IconTabBar>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,50 @@
+/* Enter your custom styles here */
+.vbox-class {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hbox-class {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.bold-class {
+    font-weight: bold;
+    margin-right: 10px;
+    color: black;
+}
+
+.text-class {
+    margin-left: 10px;
+    color: rgb(75, 22, 162);
+}
+.imgg{
+    border-radius: 10px;
+    border-top: solid black 3px;
+    margin-bottom: 10px;
+}
+.formm {
+    /* margin: 20px; */
+    color: blue;
+    padding: 15px;
+    background-color: #e9ebe1;
+    border-radius: 7px;
+}
+
+.sapMList {
+    margin: 10px;
+}
+.sapMObjectListItem {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.sapMObjectAttribute {
+    margin: 5px 0;
+}
+.sapMObjectStatus {
+    margin-top: 10px;
+}

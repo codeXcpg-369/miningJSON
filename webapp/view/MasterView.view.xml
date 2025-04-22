@@ -1,0 +1,29 @@
+<mvc:View controllerName="app.miningdetailsb27.controller.MasterView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="List of Mining Fields" id="page">
+        <headerContent>
+            <Button icon="sap-icon://sort" press="onSort"/>
+        </headerContent>
+        <subHeader>
+            <OverflowToolbar>
+                <SearchField search="onSearch" liveChange="onSearch"/>
+            </OverflowToolbar>
+        </subHeader>
+        <content>
+            <List design="Bold" id="toolList" items="{miningsModel>/miningData}" selectionChange="onItemSelect" mode="SingleSelectMaster" class="sapMList">
+                <ObjectListItem icon="{miningsModel>image}" title="{miningsModel>mine_name}" number="{miningsModel>mine_id}" class="sapMObjectListItem">
+                    <attributes>
+                        <ObjectAttribute text="{miningsModel>location}" title="Location" class="sapMObjectAttribute"/>
+                        <ObjectAttribute text="{miningsModel>mineral_type}" title="Mineral Type" class="sapMObjectAttribute"/>
+                        <ObjectAttribute text="{miningsModel>production_capacity}" title="Production Capacity" class="sapMObjectAttribute"/>
+                        <ObjectAttribute text="{miningsModel>last_inspection_date}" title="Last Inscpn Date" class="sapMObjectAttribute"/>
+                    </attributes>
+                    <firstStatus>
+                        <ObjectStatus text="{miningsModel>operational_status}" state="{= ${miningsModel>operational_status} === 'Active' ? 'Success':'Error'}" title="Op Status" class="sapMObjectStatus"/>
+                    </firstStatus>
+                </ObjectListItem>
+            </List>
+        </content>
+    </Page>
+</mvc:View>
