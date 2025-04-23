@@ -28,15 +28,27 @@
                             </HBox>
                             <HBox class="hbox-class">
                                 <Label text="Status :" class="bold-class"/>
-                                <Text text="{miningsModel>operational_status}" class="text-class" state="{= ${miningsModel>operational_status} === 'Active' ? 'Success':'Error'}"/>
+                                <Text text="{miningsModel>operational_status}" class="text-class vng" state="{= ${miningsModel>operational_status} === 'Active' ? 'Success':'Error'}"/>
                             </HBox>
                         </VBox>
                     </IconTabFilter>
 
+
+
+
+
+
+
+
+
+
+
+
+
                     <IconTabFilter icon="sap-icon://supplier">
-                    <Label text="Supplier" ></Label>
+                    <Label text="Supplier" class="suppClass"></Label>
                               <Input id="idInptSupp" width="200px" liveChange="onFilter"></Input>
-                    <Label text="Mine Type" ></Label>
+                    <Label text="Mine Type" class="suppClass"></Label>
                                 <Input id="idInptMineType" width="200px" liveChange="onFilter"></Input>
 
                                 

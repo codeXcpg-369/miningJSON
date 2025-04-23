@@ -9,17 +9,21 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 5px;
+    justify-content: center;
+    margin-bottom: 2px;
+    
 }
 
 .bold-class {
     font-weight: bold;
+    font-size: large;
     margin-right: 10px;
     color: black;
 }
 
 .text-class {
     margin-left: 10px;
+    margin-top: 2px;
     color: rgb(75, 22, 162);
 }
 .imgg{
@@ -38,6 +42,9 @@
 .sapMList {
     margin: 10px;
 }
+
+
+
 .sapMObjectListItem {
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
@@ -47,4 +54,14 @@
 }
 .sapMObjectStatus {
     margin-top: 10px;
+}
+.suppClass{
+    padding-top:10px;
+    padding-right: 3px;
+    padding-left: 30px;
+    text-shadow: 2px 2px 2px rgb(151, 220, 234);
+    /* margin-top: 10px; */
+}
+.text-class vng{
+    margin-top: 5px;
 }

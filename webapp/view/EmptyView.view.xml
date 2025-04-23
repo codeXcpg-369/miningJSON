@@ -1,11 +1,11 @@
- <mvc:View controllerName="app.miningdetailsb27.controller.DetailView"
+<mvc:View controllerName="app.miningdetailsb27.controller.DetailView"
     xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" 
     xmlns="sap.m">
-	<Page id="idEmpty" title="Empty View" >
-    
+    <Page id="idEmpty" title="Empty View">
         <VBox class="sapUiSmallMargin">
-         <Text text="No data available" />
-      </VBox>
-
-	</Page>
-</mvc:View> 
+            <Text text="No data available" />
+            <Image src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGo2bnE4czZ4aXA1NG1ybmZwMXk2NmNsbmh6MjE3c3FidnJmMnJteiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/M1rYHhCGRuUNy/giphy.gif" alt="Loading GIF" width="100%" height="100%" />
+            <!-- <Image src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDJ3ZDlsc2pzZ3IwYjRzZG05Mmt4cmxpNnFoeTRkd3d2MnEzazNwYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1eoZ0RTZCJn2gxjelX/giphy.gif" alt="Loading GIF" width="100%" height="100%"/> -->
+        </VBox>
+    </Page>
+</mvc:View>
